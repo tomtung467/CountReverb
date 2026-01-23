@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CounterController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CounterController::class, 'index']);
+Route::get('/counter', [CounterController::class, 'index']);
